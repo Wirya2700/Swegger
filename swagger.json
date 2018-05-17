@@ -1,0 +1,36 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "0.0.1",
+      "title": "Catalog Service",
+      "description": "Swagger spec for documenting the users service"
+    },
+    "servers": {
+      "url": "https://localhost:5010"
+    },
+    "schemes": [
+      "http"
+    ],
+    "securityDefinitions": {
+      "Bearer": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    },
+    "paths": {
+      "/catalog": {
+        "get": {
+          "description": "Returns a sanity check",
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+            "200": {
+              "description": "Will return 'pong!'"
+            }
+          }
+        }
+      }
+    }
+  }
